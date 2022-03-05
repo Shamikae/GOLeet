@@ -64,14 +64,16 @@ func removeDuplicates(nums []int) []int {
 }
 
 func SuperRemoveDuplicates(nums []int) int {
-    i, j := 0, 0
-    for j < len(nums) {
-        if nums[i] == nums[j] {
-            j++
-        } else {
-            nums[i + 1] = nums[j]
+    const k = 2
+    if len(nums) <= k {
+        return len(nums)
+    }
+    i := k
+    for j := k; j < len(nums); j++ {
+        if nums[j] != nums[i-k] {
+            nums[i] = nums[j]
             i++
         }
     }
-    return i+1
+    return i
 }

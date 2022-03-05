@@ -3,7 +3,7 @@ import "fmt"
 
 var nums = []int{2,2,1,3,1}
 
-func singleNumber(nums []int) int {
+func singleNumb(nums []int) int {
 	result := 0
 	for i := 0; i < len(nums); i++ {
 		result ^= nums[i]
@@ -12,5 +12,5 @@ func singleNumber(nums []int) int {
 }
 
 func main(){
-	fmt.Println(singleNumber(nums))
+	fmt.Println(singleNumb(nums))
 }
