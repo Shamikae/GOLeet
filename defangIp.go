@@ -10,8 +10,6 @@ import (
 // new string
 // n = number of times to be replaced if n< 0 unlimeted times
 
-
-
 var address = "255.100.50.0"
 
 func defangIPaddr(address string) string {
