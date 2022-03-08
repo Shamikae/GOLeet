@@ -11,11 +11,20 @@ func main(){
 	fmt.Println(fruit[0][1])
 
 	for a,value := range fruit {
-		fmt.Println("return",a +1)
+		fmt.Print("return ",a +1, "\n")
 		for _,cell := range value {
+			fmt.Println(value)
 			fmt.Println(cell)
 		}
-		
+		fmt.Println("")	
+	}
+
+	for i:=0;i<len(fruit);i++{
+		fmt.Println("line", i)
+		for j:=0;j<2;j++{
+			fmt.Print(fruit[i][j]," ")
+		}
+		fmt.Println(" ")
 	}
 
 }
